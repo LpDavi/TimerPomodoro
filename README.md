@@ -1,4 +1,4 @@
-# Git Favorites
+# Timer Pomodoro
 > Bem-vindo ao meu projeto Timer Pomodoro
 
 Site para praticar a técnica Pomodoro, (a técnica consiste na utilização de um cronômetro para dividir o trabalho em períodos de em média 25 minutos, separados por breves intervalos).
