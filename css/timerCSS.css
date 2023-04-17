@@ -16,7 +16,6 @@
     justify-self: center;
     align-self: end;
 
-    /*padding-bottom: 1rem;*/
     display: flex;
 }
 
@@ -41,8 +40,7 @@
     fill: var(--btn-disable);
 }
 
-@media (max-width: 950px)
-{
+@media (max-width: 930px) {
     #settings #timer {
         padding-bottom: 0;
     }
@@ -52,13 +50,22 @@
     }
 }
 
-@media (max-width: 450px)
-{
+@media (max-width: 650px) {
+    
+    .buttons-settings {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}
+
+@media (max-width: 450px) {
     #settings #timer {
         padding-bottom: 2rem;
     }
 
-    #settings #buttons-settings {
+    #settings .buttons-settings {
         gap: 1rem;
     }
 }

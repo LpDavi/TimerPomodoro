@@ -4,15 +4,74 @@
     box-sizing: border-box;
 }
 
+.volume-control {
+    width: 32rem;
+    height: 4rem;
+    background-color: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    outline: none;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.volume-slider-forest-Bg {
+    background-color: var(--btn-soundForest-color);
+}
+
+.volume-slider-rain-Bg {
+    background-color: var(--btn-soundRain-color);
+}
+
+.volume-slider-coffeeShop-Bg {
+    background-color: var(--btn-soundCoffeeShop-color);
+}
+
+.volume-slider-fireplace-Bg {
+    background-color: var(--btn-soundFireplace-color);
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7a7a7a;
+    cursor: pointer;
+    margin-top: -1px;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+}
+
 #sonds {
     width: clamp(14rem, 20rem + 29vw, 42rem);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40rem;
 }
 
 #sonds button {
     padding: 4.8rem;
     margin: 1.6rem;
     border-radius: 2.4rem;
-    
+
     background: var(--btn-color);
 }
 
@@ -20,14 +79,17 @@
     background: var(--btn-soundForest-color-hover);
     transition: 0.6s;
 }
+
 #sonds .rain:hover {
     background: var(--btn-soundRain-color-hover);
     transition: 0.6s;
 }
+
 #sonds .coffeeShop:hover {
     background: var(--btn-soundCoffeeShop-color-hover);
     transition: 0.6s;
 }
+
 #sonds .fireplace:hover {
     background: var(--btn-soundFireplace-color-hover);
     transition: 0.6s;
@@ -38,8 +100,7 @@
     pointer-events: none;
 }
 
-/* clamp(3.2rem, 2rem + 12vw, 6.4rem); */
-#groupSounds button svg {
+#sonds button svg {
     width: clamp(1.6rem, 4rem + 1.6vw, 5rem);
 }
 
@@ -62,108 +123,48 @@
 #sonds button.select svg path {
     fill: var(--btn-select)
 }
-/*
-#groupVolume {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    width: clamp(22rem, 4rem + 32vw, 30.6rem);
-    margin: 1.6rem 1.6rem 0 1.6rem;
-    padding: 1rem;
-
-    background: var(--btn-color);
-    border-radius: 1rem;
-}
-
-#groupSounds #groupVolume button {
-    padding: 0;
-    background: none;
-    margin: 0;
-}
-
-.slider-container {
-	position: relative;
-    width: 60%;
-}
-
-.slider-container .bar {
-	position: absolute;
-	z-index: 2;
-	left: 0.2rem;
-	top: 0.4rem;
-	width: 94%;
-	height: 0.6rem;
-	border-radius: 0.5rem;
-	background-color: var(--segundary-volume-color);
-	overflow: hidden;
-}
-
-.slider-container .bar .fill {
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-color: var(--primary-volume-color);
-}
-
-.slider-container .slider {
-	position: relative;
-	z-index: 2;
-	--webkit-appearance: none;
-	width: 100%;
-	height: 0.6rem;
-	border-radius: 0.5rem;
-	outline: none;
-	background-color: transparent;
-    cursor: pointer;
-}
-
-.slider-container .slider::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	width: 1.6rem;
-	height: 1.6rem;
-	background-color: var(--circle-volume);
-    border: var(--primary-volume-color) solid 0.4rem;
-	border-radius: 50%;
-	cursor: pointer;
-	outline: none;
-	box-shadow: 0 0 0 0 rgba(98,0,238,.1);
-	transition: .3s ease-in-out;
-}
-
-.slider-container .slider.noVolume::-webkit-slider-thumb {
-    border: var(--segundary-volume-color) solid 0.4rem;
-    transition: none;
-}
-
-.slider-container .slider::-webkit-slider-thumb:hover {
-	box-shadow: 0 0 0 5px var(--circle-volume-hover);
-}
-
-.slider-container .slider:active::-webkit-slider-thumb {
-	box-shadow: 0 0 0 10px var(--circle-volume-active);
-}
-*/
-@media (max-width: 950px)
-{
-    #groupSounds {
-        text-align: center;
+@media (max-width: 930px) {
+    main {
+        gap: 10rem;
     }
 
-    #groupSounds button {
-        padding: 4rem;
+    #sonds {
+        text-align: center;
+        margin: 2rem auto;
+        width: 32rem;
+    }
+
+    #sonds button {
+        padding: 3.5rem;
         margin: 1rem;
     }
 
-    #groupVolume {
-        margin: 2rem auto;
+    #sonds .volume-control {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin-top: 1rem;
+        width: 25rem;
     }
 }
 
-@media (max-width: 450px)
-{
-    #groupSounds button {
+@media (max-width: 450px) {
+    #sonds button {
         padding: 2.4rem;
         margin: 0.7rem;
+    }
+}
+
+@media (max-width: 300px) {
+    #sonds {
+        display: block;
+    }
+
+    #sonds .volume-control{
+        width: 22rem;
+        margin: auto;
     }
 }

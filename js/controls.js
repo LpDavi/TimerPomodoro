@@ -8,19 +8,16 @@ import {
     setMinutes
 } from './events.js'
 
-import Sound from './sounds.js'
-
-//BUTTONS-SETTINGS
+//Buttons-Controls
 function play() {
     bttnPlay.classList.add('hide')
     bttnPause.classList.remove('hide')
-    Sound().pressbuttonAudio()
 }
 
 function pause() {
     bttnPause.classList.add('hide')
     bttnPlay.classList.remove('hide')
-    Sound().pressbuttonAudio()
+
 }
 
 function stop() {
@@ -40,6 +37,8 @@ function resetBttnSounds() {
 
     bttnFireplace.classList.remove('discreet')
     bttnFireplace.classList.remove('select')
+
+
 }
 
 function addMinutes() {
@@ -47,7 +46,6 @@ function addMinutes() {
     minutes += 5;
     setMinutes.textContent = minutes;
     setMinutes.textContent = String(minutes).padStart(2, "0")
-    Sound().pressbuttonAudio()
 }
 
 function lessMinutes() {
@@ -55,7 +53,7 @@ function lessMinutes() {
     minutes -= 5;
     setMinutes.textContent = minutes
     setMinutes.textContent = String(minutes).padStart(2, "0")
-    Sound().pressbuttonAudio()
+
 }
 
 function resetControls() {
@@ -63,12 +61,14 @@ function resetControls() {
     bttnPause.classList.add('hide')
 }
 
+
+
 export {
     play,
     pause,
-    stop, 
+    stop,
     resetBttnSounds,
-    addMinutes, 
-    lessMinutes, 
+    addMinutes,
+    lessMinutes,
     resetControls
 }
