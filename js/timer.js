@@ -1,6 +1,6 @@
 import { resetBttnSounds, resetControls } from './controls.js'
 
-import { sound } from './events.js'
+import { sound } from './index.js'
 
 export default function Timer({ setSeconds, setMinutes }) { //Factor returns objects
     let TimerTimeOut

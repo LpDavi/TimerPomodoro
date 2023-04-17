@@ -6,7 +6,7 @@ import {
     bttnCoffeeShop,
     bttnFireplace,
     setMinutes
-} from './events.js'
+} from './index.js'
 
 //Buttons-Controls
 function play() {
